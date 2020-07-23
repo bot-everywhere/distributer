@@ -1,0 +1,16 @@
+{
+  "name": "distributor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "cron": "^1.8.2",
+    "dotenv": "^8.2.0",
+    "graphql-request": "1.8.2",
+    "lodash": "^4.17.19",
+    "log4js": "^6.3.0"
+  }
+}
