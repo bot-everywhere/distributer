@@ -21,7 +21,7 @@ module.exports = {
     const mutation = `
       mutation {
         createTask(
-          to: CONTROL,
+          to: JOB,
           input: {
             action: "${action}"
             payload: "${payload}",

@@ -19,8 +19,7 @@ const distribute = () => {
       if (!liveBots.length) return logger.error(`=> All bots are off`)
       const bot = _.minBy(liveBots, ({ pendingTask }) => pendingTask)
       const expiredAt = new Date(Date.now() + expire * 1000)
-      pub
-        .createJob({ action, payload, timeout, expiredAt, assignedTo: bot.id })
+      pub.createJob({ action, payload, timeout, expiredAt, assignedTo: bot.id })
         .then(({ createTask }) => logger.debug(`=> ${action} ${createTask}`))
         .catch(e => logger.error(e))
     }, null, true)
